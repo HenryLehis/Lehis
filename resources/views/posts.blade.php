@@ -1,7 +1,7 @@
 
 <x-layout>
     @foreach($posts as $post)
-    <article>
+    <article class="{{$loop->even ? "foobar" : ""}}">
         <h1>
             <a href="/posts/{{ $post->slug }}">
                 {{ $post->title }}

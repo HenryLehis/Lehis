@@ -30,9 +30,10 @@ $posts = collect(File::files(resource_path("posts")))
         'posts' => $posts
         ]);
     });
-    Route::get('/posts/{post}', function ($slug){
+    Route::get('/posts/{post}', function ($post){
+    
         return view('post',[
-            'post' => Post::findOrFail($slug)
+            'post' => Post::findOrFail($post)
         ]);
     });
 
