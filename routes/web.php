@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 Route::get("posts/{post}", function ($id){
     return view("post", [
-        "post" => Post::findoOrFail($id)
+        "post" => Post::findOrFail($id)
     ]);
 });
 
