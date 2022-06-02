@@ -28,6 +28,13 @@ Route::get("posts/{post:slug}", function (Post $post){
     ]);
 });
 
-//
+
+Route::get('categories/{category:slug}', function (Category $category){
+    return view('posts',[
+        'posts' => $category->posts
+    ]);
+});
+
+
 
 
