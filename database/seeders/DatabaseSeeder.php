@@ -22,11 +22,13 @@ class DatabaseSeeder extends Seeder
         Post::truncate();
         Category::truncate();
 
+        Post::factory()->create;
 
 
-        $user = User::factory()->create();
 
-        $personal = Category::create([
+//        $user = User::factory()->create();
+
+/*         $personal = Category::create([
             'name' => 'Personal',
             'slug' => 'personal'
         ]);
@@ -68,7 +70,7 @@ class DatabaseSeeder extends Seeder
 
             Sit rerum velit non rerum delectus sit laboriosam reiciendis ut impedit quos quo obcaecati laboriosam. Ea maiores harum ut mollitia quidem ab quis commodi. Non dolor dolorum id quaerat fugit ut pariatur numquam ut cupiditate illum ad praesentium impedit est laudantium inventore. Ea quidem molestiae et alias dignissimos sit nulla rerum.</p>'
 
-        ]);
+        ]); */
 
 
 
