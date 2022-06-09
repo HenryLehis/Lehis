@@ -19,11 +19,10 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-
-            'user_id' => User::factory(),
-            'category_id' => Category::factory(),
-            'slug' => $this->faker->slug,
-            'title' => $this->faker->sentence,
+            "user_id"=>User::factory(),
+            "category_id"=>Category::factory(),
+            "title"=>$this->faker->sentence,
+            "slug"=>$this->faker->slug,
             "excerpt"=>'<p>'.implode('</p><p>',$this->faker->paragraphs(2)).'</p>',
             "body"=>'<p>'.implode('</p><p>',$this->faker->paragraphs(6)).'</p>',
             "published_at"=>$this->faker->dateTimeBetween('-1 week','+1 week')
