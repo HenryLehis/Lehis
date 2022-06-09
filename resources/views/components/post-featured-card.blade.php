@@ -9,9 +9,10 @@ class="transition-colors duration-300 hover:bg-gray-100 border border-black bord
     <div class="flex-1 flex flex-col justify-between">
         <header class="mt-8 lg:mt-0">
             <div class="space-x-2">
-                <a href="/categories/{{ $post->category->slug }}"
+                <x-category-button :category="$post->category" />
+                {{-- <a href="/categories/{{ $post->category->slug }}"
                    class="px-3 py-1 border border-red-300 rounded-full text-red-300 text-xs uppercase font-semibold"
-                   style="font-size: 10px">{{ $post->category->name }}</a>
+                   style="font-size: 10px">{{ $post->category->name }}</a> --}}
             </div>
 
             <div class="mt-4">
@@ -28,10 +29,8 @@ class="transition-colors duration-300 hover:bg-gray-100 border border-black bord
             </div>
         </header>
 
-        <div class="text-sm mt-2">
-            <p>
-                {{ $post->excerpt }}
-            </p>
+        <div class="text-sm mt-2 space-y-4">
+            {!! $post->excerpt !!}
         </div>
 
         <footer class="flex justify-between items-center mt-8">
@@ -39,7 +38,7 @@ class="transition-colors duration-300 hover:bg-gray-100 border border-black bord
                 <img src="/images/lary-avatar.svg" alt="Lary avatar">
                 <div class="ml-3">
                     <h5 class="font-bold">
-                        <a href="/authors/{{ $post->author->username }}">
+                        <a href="/?author={{ $post->author->username }}">
                             {{ $post->author->name}}
                         </a>
                     </h5>
